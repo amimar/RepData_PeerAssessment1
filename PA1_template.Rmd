@@ -12,7 +12,7 @@
 ### Here is the code:
 
 ```{r aggregate}
-indata <- read.csv("./activity.csv")
+indata <- read.csv("activity.csv")
 aggdata <- aggregate(steps ~ date, data = indata, sum, na.rm = T)
 ```
 ### Here is the plot:

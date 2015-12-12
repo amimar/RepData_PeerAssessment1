@@ -13,7 +13,19 @@
 
 
 ```r
-indata <- read.csv("./activity.csv")
+indata <- read.csv("activity.csv")
+```
+
+```
+## Warning in file(file, "rt"): cannot open file 'activity.csv': No such file
+## or directory
+```
+
+```
+## Error in file(file, "rt"): cannot open the connection
+```
+
+```r
 aggdata <- aggregate(steps ~ date, data = indata, sum, na.rm = T)
 ```
 ### Here is the plot:

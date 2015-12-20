@@ -14,18 +14,6 @@
 
 ```r
 indata <- read.csv("activity.csv")
-```
-
-```
-## Warning in file(file, "rt"): cannot open file 'activity.csv': No such file
-## or directory
-```
-
-```
-## Error in file(file, "rt"): cannot open the connection
-```
-
-```r
 aggdata <- aggregate(steps ~ date, data = indata, sum, na.rm = T)
 ```
 ### Here is the plot:
@@ -149,7 +137,7 @@ Findings: the mean was not changed. The median was changed a bit.
 
 
 
-1. Create a new factor variable in the dataset with two levels ‚<U+0080><U+0093> ‚<U+0080><U+009C>weekday‚<U+0080>ù and ‚<U+0080><U+009C>weekend‚<U+0080>ù indicating whether a given date is a weekday or weekend day.
+1. Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 
 ### The code for adding factor variable daytype:
